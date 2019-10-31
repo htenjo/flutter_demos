@@ -15,14 +15,11 @@ class _DynamicTextAppState extends State<DynamicTextApp> {
   List<String> _texts = [
     "Today is a great day!",
     "It's Friday...",
-    "Hmmm... have a nice day!"
+    "Hmmm... have a nice day!",
+    "Another messages"
   ];
   Random _random = Random(0);
-  String _textToDisplay;
-
-  _DynamicTextAppState() {
-    changeText();
-  }
+  String _textToDisplay = '';
 
   void changeText() {
     setState(() {
