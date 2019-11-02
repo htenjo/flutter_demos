@@ -2,7 +2,7 @@ import 'package:first_app/model/transaction.dart';
 import 'package:flutter/material.dart';
 
 class TransactionDetail extends StatelessWidget {
-  Transaction _transaction;
+  final Transaction _transaction;
 
   TransactionDetail(this._transaction);
 
