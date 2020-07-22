@@ -15,3 +15,17 @@ This is a repository to do exercises in my flutter leaning path
 | `$ open -a Simulator`         | Open the iPhone simulator on iOS                       |
 | `$ flutter create <APP_NAME>` | Create a new App folder                                |
 | `$ flutter run`               | Install and start the App in the simualor or device    |
+
+## Dart hints:
+
+```
+//Example of class with named parameters
+class Person {
+    var name;
+    var age;
+    var lastName;
+
+    Person({int age = 10, String name = 'My name', @required String lastName}) {
+    }
+}
+```

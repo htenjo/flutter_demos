@@ -1,4 +1,4 @@
-# basic_default_app
+# Basic Default App
 
 A new Flutter project.
 
