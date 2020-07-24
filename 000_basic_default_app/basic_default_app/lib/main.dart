@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -29,10 +28,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  var message = 'Default message: ' + WordPair.random().asPascalCase;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      message = WordPair.random().asPascalCase;
     });
   }
 
@@ -46,13 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Cantidad de veces:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Text('Cantidad de veces:'),
+            Text('$_counter', style: Theme.of(context).textTheme.headline4),
+            Text(message),
           ],
         ),
       ),

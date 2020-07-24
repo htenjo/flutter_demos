@@ -10,16 +10,30 @@ This is a repository to do exercises in my flutter leaning path
 - [004. My Expenses](004_my-expenses/README.md)
 
 ## Basic commands
-| Command                       | Description                                            |
-| ----------------------------- | ------------------------------------------------------ |
-| `$ open -a Simulator`         | Open the iPhone simulator on iOS                       |
-| `$ flutter create <APP_NAME>` | Create a new App folder                                |
-| `$ flutter run`               | Install and start the App in the simualor or device    |
+| Command                       | Description                                         |
+| ----------------------------- | --------------------------------------------------- |
+| `$ open -a Simulator`         | Open the iPhone simulator on iOS                    |
+| `$ flutter create <APP_NAME>` | Create a new App folder                             |
+| `$ flutter run`               | Install and start the App in the simualor or device |
+
+## Dart features
+| Command   | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| @override | A decorator to be sure you are declaring a method in the right way |
+| @required | To declare a parameter as a required                               |
+
+## Flutter features
+| Fetaure         | Description                                        |
+| --------------- | -------------------------------------------------- |
+| StatelessWidged | Base component without state                       |
+| MaterialApp     | Basic Apps widget with default themes and settings |
+| Scafold         | Display a basic App layout with body and AppBar    |
+| AppBar          | Basic Bar Widget with app information              |
+
 
 ## Dart hints:
-
 ```
-//Example of class with named parameters
+//Example of class with named parameters specified
 class Person {
     var name;
     var age;
@@ -28,4 +42,19 @@ class Person {
     Person({int age = 10, String name = 'My name', @required String lastName}) {
     }
 }
+```
+
+```
+//Example of class with syntactic suggar in the contructor
+class Person {
+    var name;
+    var age;
+    var lastName;
+
+    Person({this.age = 10, this.name, this.lastName});
+}
+```
+
+```
+
 ```
