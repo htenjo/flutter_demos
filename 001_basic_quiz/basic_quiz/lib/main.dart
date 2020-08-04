@@ -1,4 +1,7 @@
+import 'package:basic_quiz/buttons.dart';
 import 'package:flutter/material.dart';
+import 'question.dart';
+import 'model.dart';
 
 void main() {
   runApp(QuizApp());
@@ -13,27 +16,42 @@ class QuizApp extends StatelessWidget {
         primarySwatch: Colors.lime,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Basic Quiz App'),
+      home: QuizHome(title: 'Basic Quiz App'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class QuizHome extends StatefulWidget {
+  QuizHome({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _QuizHomeState createState() => _QuizHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _QuizHomeState extends State<QuizHome> {
   int _counter = 0;
+  double _score = 0;
+  double _tempScore = 0;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      _score += _tempScore;
+      print("_incrementCounter ::: counter = $_counter - _score = $_score - _tempScore = $_tempScore");
     });
+  }
+
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+      print("_resetCounter $_counter");
+    });
+  }
+
+  void selectOptionScore(double newScore) {
+    _tempScore = newScore;
   }
 
   @override
@@ -47,20 +65,14 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
+              'Final Questionnaire !!!',
               style: Theme.of(context).textTheme.headline4,
             ),
+            QuestionWidget(QUESTIONNAIRE[_counter], selectOptionScore),
+            QUESTIONNAIRE.length > _counter ? NextButton(_incrementCounter) : FinalButton(_resetCounter),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

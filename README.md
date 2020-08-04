@@ -1,10 +1,9 @@
 # Flutter practice exercises
-
 This is a repository to do exercises in my flutter leaning path
 
 ## Tutorial folders
 - [000. Default basic App](000_basic_default_app/basic_default_app/README.md)
-- [001. Basic Quiz](001_basic_quiz/README.md)
+- [001. Basic Quiz](001_basic_quiz/basic_quiz/README.md)
 - [002. Basic stateful widget](002_basic_stateful_widget/README.md)
 - [003. App using multiple widgets](003_test1_multi-widget/README.md)
 - [004. My Expenses](004_my-expenses/README.md)
@@ -61,8 +60,4 @@ class Person {
 
     Person.veryOld() ;
 }
-```
-
-```
-
 ```
