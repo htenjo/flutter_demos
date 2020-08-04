@@ -8,14 +8,9 @@ class QuestionWidget extends StatelessWidget {
 
   QuestionWidget(this.question, this.selectOption);
 
-  void assignScore() {
-    print("::: Assigning new Score $value");
-    selectOption(value);
-  }
-
   List<Widget> getAvailableOptions() {
     return question.options
-        .map((item) => ResponseOptionButton(label: item.label, value: item.value, action: assignScore))
+        .map((item) => ResponseOptionButton(label: item.label, value: item.value, action: selectOption))
         .toList();
   }
 

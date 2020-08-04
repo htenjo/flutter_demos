@@ -36,11 +36,15 @@ class ResponseOptionButton extends StatelessWidget {
 
   ResponseOptionButton({this.label, this.value, this.action});
 
+  void selectOption() {
+    this.action(this.value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
       child: Text(label),
-      onPressed: this.action,
+      onPressed: this.selectOption,
       color: Colors.deepOrange,
     );
   }

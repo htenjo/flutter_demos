@@ -40,18 +40,22 @@ class _QuizHomeState extends State<QuizHome> {
       _counter++;
       _score += _tempScore;
       print("_incrementCounter ::: counter = $_counter - _score = $_score - _tempScore = $_tempScore");
+      _tempScore = 0;
     });
   }
 
   void _resetCounter() {
     setState(() {
       _counter = 0;
+      _score = 0;
+      _tempScore = 0;
       print("_resetCounter $_counter");
     });
   }
 
   void selectOptionScore(double newScore) {
     _tempScore = newScore;
+    print("::: SelectedOption = $newScore");
   }
 
   @override
@@ -68,7 +72,9 @@ class _QuizHomeState extends State<QuizHome> {
               'Final Questionnaire !!!',
               style: Theme.of(context).textTheme.headline4,
             ),
-            QuestionWidget(QUESTIONNAIRE[_counter], selectOptionScore),
+            QUESTIONNAIRE.length == _counter
+                ? Text("Your score $_score")
+                : QuestionWidget(QUESTIONNAIRE[_counter], selectOptionScore),
             QUESTIONNAIRE.length > _counter ? NextButton(_incrementCounter) : FinalButton(_resetCounter),
           ],
         ),
