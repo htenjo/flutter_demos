@@ -33,14 +33,12 @@ class QuizHome extends StatefulWidget {
 class _QuizHomeState extends State<QuizHome> {
   int _counter = 0;
   double _score = 0;
-  double _tempScore = 0;
 
-  void _incrementCounter() {
+  void _incrementCounter(double newScore) {
     setState(() {
       _counter++;
-      _score += _tempScore;
-      print("_incrementCounter ::: counter = $_counter - _score = $_score - _tempScore = $_tempScore");
-      _tempScore = 0;
+      _score += newScore;
+      print("_incrementCounter ::: counter = $_counter - _score = $_score - selectedOption = $newScore");
     });
   }
 
@@ -48,14 +46,8 @@ class _QuizHomeState extends State<QuizHome> {
     setState(() {
       _counter = 0;
       _score = 0;
-      _tempScore = 0;
       print("_resetCounter $_counter");
     });
-  }
-
-  void selectOptionScore(double newScore) {
-    _tempScore = newScore;
-    print("::: SelectedOption = $newScore");
   }
 
   @override
@@ -74,8 +66,8 @@ class _QuizHomeState extends State<QuizHome> {
             ),
             QUESTIONNAIRE.length == _counter
                 ? Text("Your score $_score")
-                : QuestionWidget(QUESTIONNAIRE[_counter], selectOptionScore),
-            QUESTIONNAIRE.length > _counter ? NextButton(_incrementCounter) : FinalButton(_resetCounter),
+                : QuestionWidget(QUESTIONNAIRE[_counter], _incrementCounter),
+            if (QUESTIONNAIRE.length == _counter) FinalButton(_resetCounter),
           ],
         ),
       ),
