@@ -1,19 +1,5 @@
 import 'package:flutter/material.dart';
 
-class NextButton extends StatelessWidget {
-  final Function nextFunction;
-
-  NextButton(this.nextFunction);
-
-  @override
-  Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Text('Next'),
-      onPressed: this.nextFunction,
-    );
-  }
-}
-
 class FinalButton extends StatelessWidget {
   final Function closeFunction;
 
