@@ -13,21 +13,21 @@ class QuizApp extends StatelessWidget {
         primarySwatch: Colors.lime,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Basic Quiz App'),
+      home: QuizHome(title: 'Basic Quiz App'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class QuizHome extends StatefulWidget {
+  QuizHome({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _QuizHomeState createState() => _QuizHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _QuizHomeState extends State<QuizHome> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -56,11 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
