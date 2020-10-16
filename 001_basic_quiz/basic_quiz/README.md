@@ -1,6 +1,5 @@
-# basic_quiz
-
-A new Flutter project.
+# Basic Quiz Application
+Example flutter project to build a basic 
 
 ## Getting Started
 

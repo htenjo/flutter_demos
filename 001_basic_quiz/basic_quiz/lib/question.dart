@@ -1,17 +1,16 @@
+import 'package:basic_quiz/buttons.dart';
+import 'package:basic_quiz/model.dart';
 import 'package:flutter/material.dart';
 
-class Question extends StatelessWidget {
-  String questionText;
-  List<String> answerOptions;
+class QuestionWidget extends StatelessWidget {
+  final Question question;
+  final Function selectOption;
 
-  Question({this.questionText, this.answerOptions});
+  QuestionWidget(this.question, this.selectOption);
 
   List<Widget> getAvailableOptions() {
-    return answerOptions
-        .map((item) => RaisedButton(
-              child: Text(item),
-              onPressed: null,
-            ))
+    return question.options
+        .map((item) => ResponseOptionButton(label: item.label, value: item.value, action: selectOption))
         .toList();
   }
 
@@ -20,7 +19,7 @@ class Question extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Text(questionText),
+          Text(question.text),
           ...getAvailableOptions(),
         ],
       ),

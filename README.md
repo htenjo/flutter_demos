@@ -1,20 +1,20 @@
 # Flutter practice exercises
-
 This is a repository to do exercises in my flutter leaning path
 
 ## Tutorial folders
 - [000. Default basic App](000_basic_default_app/basic_default_app/README.md)
-- [001. Basic Quiz](001_basic_quiz/README.md)
+- [001. Basic Quiz](001_basic_quiz/basic_quiz/README.md)
 - [002. Basic stateful widget](002_basic_stateful_widget/README.md)
 - [003. App using multiple widgets](003_test1_multi-widget/README.md)
 - [004. My Expenses](004_my-expenses/README.md)
 
 ## Basic commands
-| Command                       | Description                                         |
-| ----------------------------- | --------------------------------------------------- |
-| `$ open -a Simulator`         | Open the iPhone simulator on iOS                    |
-| `$ flutter create <APP_NAME>` | Create a new App folder                             |
-| `$ flutter run`               | Install and start the App in the simualor or device |
+| Command                       | Description                                              |
+| ----------------------------- | -------------------------------------------------------- |
+| `$ open -a Simulator`         | Open the iPhone simulator on iOS                         |
+| `$ flutter create <APP_NAME>` | Create a new App folder                                  |
+| `$ flutter run`               | Install and start the App in the simualor or device      |
+| `$ flutter packages get`      | Install missing packages defined in the pubspec.yml file |
 
 ## Dart features
 | Command   | Description                                                        |
@@ -23,28 +23,44 @@ This is a repository to do exercises in my flutter leaning path
 | @required | To declare a parameter as a required                               |
 
 ## Flutter features
-| Fetaure                   | Description                                                              |
-| ------------------------- | ------------------------------------------------------------------------ |
-| StatelessWidged           | Base component without state                                             |
-| MaterialApp               | Basic Apps widget with default themes and settings                       |
-| Scafold                   | Display a basic App layout with body and AppBar                          |
-| AppBar                    | Basic Bar Widget with app information                                    |
-| TextStyle                 | Allows you to specify text properties (fontSize, ...                     |
-| TextAlign                 | Allows you to set the text orientation (TextAlign.center)                |
-| double.infinity           | MAX double value useful for max size/width                               |
-| EdgeInsets.all            | Useful for setting borders                                               |
-| Colors                    | Class with static fields with predefined colors                          |
+| Fetaure                 | Description                                               |
+| ----------------------- | --------------------------------------------------------- |
+| StatelessWidged         | Base component without state                              |
+| MaterialApp             | Basic Apps widget with default themes and settings        |
+| Scafold                 | Display a basic App layout with body and AppBar           |
+| AppBar                  | Basic Bar Widget with app information                     |
+| TextStyle               | Allows you to specify text properties (fontSize, ...      |
+| TextAlign               | Allows you to set the text orientation (TextAlign.center) |
+| double.infinity         | MAX double value useful for max size/width                |
+| EdgeInsets.all          | Useful for setting borders                                |
+| Colors                  | Class with static fields with predefined colors           |
 | Function                  | Type to specify functions as field types                                 |
 | SingleChildScrollableView | Component to scroll a list of items (SHOULD BE A BODY TO WORK)           |
-| ListView                  | Widget with default scroll (Use builder to render just the ones visible) |
-| GestureDetector           | Wrapper container to identify gestures and assign actions to them        |
+| Flexible                  | Kind of container to layout like in CSS                                  |
+| Stack                   | To put widgets on top of other widgets                    |
+| Card                    | Nice widgets to display information                       |
+| ListView                | Like a column but scrollable                              |
+| GridView                | Like a  table                                             |
+| ListTitle               | Basic widget with default styles                          |
+| Text                    | ...                                                       |
+| Image                   | ...                                                       |
+| Icon                    | ...                                                       |
+| Icons                     | Collections of predefined Icons                                          |
+| TextField               | ...                                                       |
+| RaiseButton, FlatButton | ...                                                       |
+| GestureDetector         | ?                                                         |
+| InkWell                 | ?                                                         |
+| Container               | Best component to organize widgets                        |
+| @Required               | From: `import 'package:flutter/foundation.dart'`          |
+| BoxDecoration           | Styles for components that support this property          |
+| Input decoration        | To stylish input types                                    |
 | showModalButtomSheet      | Context panel displayed from the bottom                                  |
 | Scafold::AppBar:::Actions | Buttons in the AppBar                                                    |
 | IconButton                | Useful widget to be used in the AppBar::Actions                          |
-| Icon                      | Just a widget to render an icon                                          |
-| Icons                     | Collections of predefined Icons                                          |
-| Flexible                  | Kind of container to layout like in CSS                                  |
 
+## Flutter hints
+
+- pub.dev: Repository for flutter/dart external libraries
 
 ## Dart hints:
 ```
@@ -70,6 +86,7 @@ class Person {
 
     Person.veryOld() ;
 }
+<<<<<<< HEAD
 ```
 
 ```
@@ -132,3 +149,6 @@ Donald Rumsfeld
 Unknown unknowns are the nemesis of software systems
 
 UnmodifiableListView<Item> get items => UnmodifiableListView(_items);
+=======
+```
+>>>>>>> 97b02768358cbe5d7a38624ed6932ef238754aa4
