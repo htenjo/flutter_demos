@@ -1,12 +1,13 @@
 # Flutter practice exercises
 This is a repository to do exercises in my flutter leaning path
 
-## Tutorial folders
-- [000. Default basic App](000_basic_default_app/basic_default_app/README.md)
-- [001. Basic Quiz](001_basic_quiz/basic_quiz/README.md)
-- [002. Basic stateful widget](002_basic_stateful_widget/README.md)
-- [003. App using multiple widgets](003_test1_multi-widget/README.md)
-- [004. My Expenses](004_my-expenses/README.md)
+## New Demos
+- [001. Roller Dice App]()
+- [002. Quiz App]()
+
+## Old Tutorial folders
+- [000. Roller Dice App]()
+- [001. Quiz]()
 
 ## Basic commands
 | Command                       | Description                                              |
@@ -15,12 +16,6 @@ This is a repository to do exercises in my flutter leaning path
 | `$ flutter create <APP_NAME>` | Create a new App folder                                  |
 | `$ flutter run`               | Install and start the App in the simualor or device      |
 | `$ flutter packages get`      | Install missing packages defined in the pubspec.yml file |
-
-## Dart features
-| Command   | Description                                                        |
-| --------- | ------------------------------------------------------------------ |
-| @override | A decorator to be sure you are declaring a method in the right way |
-| @required | To declare a parameter as a required                               |
 
 ## Flutter features
 | Fetaure                 | Description                                               |
@@ -42,16 +37,8 @@ This is a repository to do exercises in my flutter leaning path
 | ListView                | Like a column but scrollable                              |
 | GridView                | Like a  table                                             |
 | ListTitle               | Basic widget with default styles                          |
-| Text                    | ...                                                       |
-| Image                   | ...                                                       |
-| Icon                    | ...                                                       |
 | Icons                     | Collections of predefined Icons                                          |
-| TextField               | ...                                                       |
-| RaiseButton, FlatButton | ...                                                       |
-| GestureDetector         | ?                                                         |
-| InkWell                 | ?                                                         |
 | Container               | Best component to organize widgets                        |
-| @Required               | From: `import 'package:flutter/foundation.dart'`          |
 | BoxDecoration           | Styles for components that support this property          |
 | Input decoration        | To stylish input types                                    |
 | showModalButtomSheet      | Context panel displayed from the bottom                                  |
@@ -63,92 +50,3 @@ This is a repository to do exercises in my flutter leaning path
 - pub.dev: Repository for flutter/dart external libraries
 
 ## Dart hints:
-```
-//Example of class with named parameters specified
-class Person {
-    var name;
-    var age;
-    var lastName;
-
-    Person({int age = 10, String name = 'My name', @required String lastName}) {
-    }
-}
-```
-
-```
-//Example of class with syntactic suggar in the contructor
-class Person {
-    var name;
-    var age;
-    var lastName;
-
-    Person({this.age = 10, this.name, this.lastName});
-
-    Person.veryOld() ;
-}
-<<<<<<< HEAD
-```
-
-```
-
-```
-
-
-
-
-
-
-
-# TO ORGANIZE:
-
-SizedBox
-FittedBox
-Padding (Container Specific for Padding)
-Expanded (Component simpler than Flexible?)
-ListTile (Component to hold info inside ListViews)
-Circle Avatar (Nice component to display info inside the ListTile)
-SingleChildScrollView 
-Switch
-MediaQuery.of(context).size
-CircularProgressIndicator
-
----------
-import 'package:flutter/services.dart'
-
-WidgetsFlutterBinding.ensureInitialized();
-SystemChrome.setPreferedOrientation([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
----------
-
----------
-import 'dart:io'
-
-Platform
----------
-
-
-with WidgetBindingObservable //To use app lifecycles
-
-ValueKeys(id) //ListItems identifier
-
-GridView (Layout to organize wdgets in matrix way)
-
-InkWell: Like GestureDetector but with feeback
-
-Navigator.of(context) = To go to a different page
-
-ModalRoute.of(context).settings.arguments = To retrieve the information required from the parent page
-
-ClipRRect = Force children to take the form of the rectangle 
-
-BottomNavigationBar = TO include Tabs
-
-
-…because as we know, there are known knowns; there are things we know we know. We also know there are known unknowns; that is to say we know there are some things we do not know. But there are also unknown unknowns—the ones we don’t know we don’t know.
-
-Donald Rumsfeld
-Unknown unknowns are the nemesis of software systems
-
-UnmodifiableListView<Item> get items => UnmodifiableListView(_items);
-=======
-```
->>>>>>> 97b02768358cbe5d7a38624ed6932ef238754aa4
