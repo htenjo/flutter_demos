@@ -11,9 +11,8 @@ class QuizApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         home: Scaffold(
-          body: GradientContainer(),
-        )
-    );
+      body: GradientContainer(),
+    ));
   }
 }
 
@@ -33,17 +32,26 @@ class GradientContainer extends StatelessWidget {
               Color(0xff870160),
               Color(0xffac255e),
               Color(0xffca485c),
-              Color(0xffe16b5c),
-              Color(0xfff39060),
-              Color(0xffffb56b),
             ],
             // Gradient from https://learnui.design/tools/gradient-generator.html
             tileMode: TileMode.mirror,
           ),
         ),
-        child: const Center(
-          child: Text('Some Dummy Text'),
-        )
-    );
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/quiz-logo.png', height: 250),
+              const SizedBox(height: 60),
+              const Text('Learn flutter the fun way!',
+                  textScaleFactor: 1.5, style: TextStyle(color: Colors.white)),
+              const SizedBox(height: 30),
+              OutlinedButton(
+                  onPressed: () {},
+                  child: const Text('Start Quiz',
+                      style: TextStyle(color: Colors.white))),
+            ],
+          ),
+        ));
   }
 }
