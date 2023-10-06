@@ -11,12 +11,14 @@ class StartScreen extends StatelessWidget {
         Image.asset('assets/images/quiz-logo.png', height: 250),
         const SizedBox(height: 60),
         const Text('Learn flutter the fun way!',
-            textScaleFactor: 1.5, style: TextStyle(color: Colors.white)),
+            style: TextStyle(color: Colors.white, fontSize: 24)),
         const SizedBox(height: 30),
         OutlinedButton(
             onPressed: () {},
-            child: const Text('Start Quiz',
-                style: TextStyle(color: Colors.white))),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white
+            ),
+            child: const Text('Start Quiz')),
       ],
     );
   }
